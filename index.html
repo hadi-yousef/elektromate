@@ -1,15 +1,174 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ElektroMate Pro</title><link rel="stylesheet" href="style.css"></head>
-<body><main>
-<header><div class="logo">⚡</div><strong>ElektroMate Pro</strong></header>
-<h1>ElektroMate Pro</h1>
-<p class="muted">Lern-App für Elektro-Lehrlinge in Österreich und Deutschland.</p>
-<div class="card">
-<p>Lerne die Grundlagen der Elektrotechnik in kurzen Einheiten mit Erklärungen, Beispielen und Fragen.
-In der Werkstatt baust du Schaltungen auf dem iPhone, siehst Messwerte sofort und beobachtest, wie Strom fließt
-und Kondensatoren laden.</p>
-</div>
-<nav><a href="datenschutz.html">Datenschutz</a><a href="support.html">Support</a></nav>
-<footer>ElektroMate Pro · Kontakt: <a href="mailto:y.hadi@elektrotechnik-hadi.at">y.hadi@elektrotechnik-hadi.at</a></footer>
-</main></body></html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ElektroMate Pro – Elektrotechnik verstehen, Schritt für Schritt</title>
+<meta name="description" content="Die Lern-App für Elektro-Lehrlinge in Österreich und Deutschland: kurze Lektionen mit bewegten Bildern, freiwillige Quizfragen und eine Werkstatt für eigene Schaltungen.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F6FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1A33" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="springen" href="#inhalt">Zum Inhalt</a>
+
+<header class="kopf">
+  <div class="breite kopf-innen">
+    <a class="marke" href="index.html"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="6" fill="#2359E8"/><path fill="#fff" d="M13.71 3.89 12.96 9.98h4.64l-7.99 10.06 1.36-6.47H6.61z"/></svg>ElektroMate <span class="marke-pro">Pro</span></a>
+    <a class="pille" href="#laden">Laden</a>
+  </div>
+</header>
+
+<main id="inhalt" tabindex="-1">
+
+  <section class="held breite" aria-labelledby="titel">
+    <div>
+      <h1 id="titel">Elektro&shy;technik verstehen. <em>Schritt für Schritt.</em></h1>
+      <p class="held-satz">Die Lern-App für Elektro-Lehrlinge in Österreich und Deutschland: kurze Lektionen mit bewegten Bildern, freiwillige Quizfragen und eine Werkstatt für eigene Schaltungen.</p>
+      <div class="knoepfe">
+        <a class="knopf knopf-limette" href="android.html">Für Android laden<span class="unsichtbar">,</span> <small>bald</small></a>
+        <a class="knopf knopf-zweit" href="#laden">iPhone<span class="unsichtbar">,</span> <small>im Test</small></a>
+      </div>
+    </div>
+
+    <div class="held-bild" data-bewegung>
+      <div class="schein" aria-hidden="true"></div>
+      <div class="lampe-schein" aria-hidden="true"></div>
+      <!-- Stromkreis: Spannungsquelle links (lange Platte = Plus), Lampe rechts (IEC: Kreis mit Kreuz).
+           Die Punkte laufen in technischer Stromrichtung von Plus über die Lampe nach Minus. -->
+      <svg class="stromkreis" viewBox="0 0 500 480" aria-hidden="true" focusable="false">
+        <path class="draht-glanz" d="M24 284V120h452v158M476 304v158H24V298"/>
+        <path class="draht" d="M24 284V120h452v158M476 304v158H24V298"/>
+        <path class="punkte" d="M24 284V120h452v158"/>
+        <path class="punkte" d="M476 304v158H24V298"/>
+        <path class="bauteil platte" d="M10 284h28"/>
+        <path class="bauteil platte platte-minus" d="M17 298h14"/>
+        <circle class="lampe-glas" cx="476" cy="291" r="13"/>
+        <path class="bauteil" d="m466.8 281.8 18.4 18.4m-18.4 0 18.4-18.4"/>
+      </svg>
+      <picture class="handy handy-hinten">
+        <source media="(prefers-color-scheme: dark)" srcset="bilder/lektion-dunkel-280.jpg 280w, bilder/lektion-dunkel-440.jpg 440w" sizes="(min-width: 1260px) 214px, (min-width: 900px) 17vw, 34vw">
+        <img src="bilder/lernpfad-hell-440.jpg" srcset="bilder/lernpfad-hell-280.jpg 280w, bilder/lernpfad-hell-440.jpg 440w" sizes="(min-width: 1260px) 214px, (min-width: 900px) 17vw, 34vw" width="440" height="956"
+          alt="Lernpfad der App: 6 Kapitel und 37 Themen als farbige Kapitelkarten"
+          data-alt-hell="Lernpfad der App: 6 Kapitel und 37 Themen als farbige Kapitelkarten"
+          data-alt-dunkel="Lektion „Das Atom“ in der App, Abschnitt 3 von 10: ein Lernbild zeigt Kern und Hülle">
+      </picture>
+      <picture class="handy handy-vorn">
+        <source media="(prefers-color-scheme: dark)" srcset="bilder/kapitel1-dunkel-280.jpg 280w, bilder/kapitel1-dunkel-440.jpg 440w" sizes="(min-width: 1260px) 214px, (min-width: 900px) 17vw, 34vw">
+        <img src="bilder/heute-hell-440.jpg" srcset="bilder/heute-hell-280.jpg 280w, bilder/heute-hell-440.jpg 440w" sizes="(min-width: 1260px) 214px, (min-width: 900px) 17vw, 34vw" width="440" height="956" fetchpriority="high"
+          alt="Startseite der App: Willkommen, dein nächstes Thema ist „Das Atom“"
+          data-alt-hell="Startseite der App: Willkommen, dein nächstes Thema ist „Das Atom“"
+          data-alt-dunkel="Kapitel 1 „Strom verstehen“ in der App: die Themen als Pfad, angefangen bei „Das Atom“">
+      </picture>
+    </div>
+  </section>
+
+  <section class="abschnitt breite lernpfad" id="lernpfad" aria-labelledby="lernpfad-titel">
+    <div>
+      <p class="kicker">Lernpfad</p>
+      <h2 id="lernpfad-titel">6 Kapitel, 37 Themen</h2>
+      <p class="abschnitt-satz">Vom Atom bis zum Drehstrom. Jedes Thema ist in wenigen Minuten gelesen.</p>
+    </div>
+    <ol class="kapitel" role="list">
+      <li class="k1"><span class="kapitel-farbe" aria-hidden="true">1</span><span><span class="kapitel-meta">Kapitel 1 · 6 Themen</span><strong>Strom verstehen</strong></span></li>
+      <li class="k2"><span class="kapitel-farbe" aria-hidden="true">2</span><span><span class="kapitel-meta">Kapitel 2 · 7 Themen</span><strong>Rechnen und messen</strong></span></li>
+      <li class="k3"><span class="kapitel-farbe" aria-hidden="true">3</span><span><span class="kapitel-meta">Kapitel 3 · 7 Themen</span><strong>Bauteile und Felder</strong></span></li>
+      <li class="k4"><span class="kapitel-farbe" aria-hidden="true">4</span><span><span class="kapitel-meta">Kapitel 4 · 9 Themen</span><strong>Wechselstrom beherrschen</strong></span></li>
+      <li class="k5"><span class="kapitel-farbe" aria-hidden="true">5</span><span><span class="kapitel-meta">Kapitel 5 · 4 Themen</span><strong>Energie und Antriebe</strong></span></li>
+      <li class="k6"><span class="kapitel-farbe" aria-hidden="true">6</span><span><span class="kapitel-meta">Kapitel 6 · 4 Themen</span><strong>Schutz und Leitungen</strong></span></li>
+    </ol>
+  </section>
+
+  <div class="abschnitt breite paar">
+    <section class="karte merkmal" id="lektionen" aria-labelledby="lektionen-titel">
+      <p class="kicker">Lektionen</p>
+      <h2 id="lektionen-titel">Bilder, die sich bewegen</h2>
+      <div class="merkmal-zeile">
+        <p>Jedes Thema ist eine Lektion zum Durchscrollen. Die Lernbilder bewegen sich mit, das Quiz am Ende ist freiwillig.</p>
+        <picture class="handy">
+          <img src="bilder/lektion-dunkel-440.jpg" srcset="bilder/lektion-dunkel-280.jpg 280w, bilder/lektion-dunkel-440.jpg 440w" sizes="(min-width: 900px) 180px, 132px" width="440" height="956" loading="lazy" decoding="async"
+            alt="Lektion „Das Atom“, Abschnitt 3 von 10: ein Lernbild zeigt Kern und Hülle, darunter ein kurzer Text">
+        </picture>
+      </div>
+    </section>
+
+    <section class="karte merkmal" id="werkstatt" aria-labelledby="werkstatt-titel">
+      <p class="kicker">Werkstatt</p>
+      <h2 id="werkstatt-titel">Schaltung bauen, Strom sehen</h2>
+      <div class="merkmal-zeile">
+        <p>Baue Schaltungen mit echten Schaltzeichen. Die App rechnet mit und zeigt, wo Strom fließt.</p>
+        <picture class="handy">
+          <img src="bilder/werkstatt-dunkel-440.jpg" srcset="bilder/werkstatt-dunkel-280.jpg 280w, bilder/werkstatt-dunkel-440.jpg 440w" sizes="(min-width: 900px) 180px, 132px" width="440" height="956" loading="lazy" decoding="async"
+            alt="Werkstatt der App: die Schaltung „Selbsthaltung“ aus Schaltzeichen, darunter das Oszilloskop">
+        </picture>
+      </div>
+    </section>
+  </div>
+
+  <section class="abschnitt breite" id="laden" aria-labelledby="laden-titel">
+    <p class="kicker">Laden</p>
+    <h2 id="laden-titel">So kommst du zur App</h2>
+    <div class="laden-karten">
+      <div class="karte laden-karte">
+        <h3>Android</h3>
+        <p>Als APK direkt von dieser Seite, ohne Play Store. Gerade in Vorbereitung.</p>
+        <a class="weiter" href="android.html">Zur Download-Seite<span class="unsichtbar"> für Android</span> <svg class="pfeil" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg></a>
+      </div>
+      <div class="karte laden-karte">
+        <h3>iPhone</h3>
+        <p>Die App ist gerade im Test. Sobald sie im App Store ist, findest du den Link hier.</p>
+        <p class="status">Im Test</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="abschnitt breite">
+    <div class="karte hinweis-karte">
+      <span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></span>
+      <div>
+        <a href="datenschutz.html">Dein Lernstand bleibt bei dir<span class="unsichtbar"> – zur Datenschutzerklärung</span></a>
+        <p>Kein Konto, keine Werbung. Alles bleibt auf deinem Gerät.</p>
+      </div>
+      <svg class="pfeil" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg>
+    </div>
+  </div>
+
+</main>
+
+<footer class="fuss">
+  <div class="breite fuss-innen">
+    <nav aria-label="Rechtliches und Hilfe">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="support.html">Support</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+    <p>Kontakt: <a href="mailto:y.hadi@elektrotechnik-hadi.at">y.hadi@elektrotechnik-hadi.at</a></p>
+  </div>
+</footer>
+
+<script>
+  // Strompunkte und Lampe bewegen sich nur, solange der Stromkreis zu sehen ist.
+  // Bei „Bewegung reduzieren“ hält das CSS alles an.
+  // Die Bildbeschreibung passt sich an, weil hell und dunkel andere Bildschirme zeigen.
+  (() => {
+    if ('IntersectionObserver' in window) {
+      const beobachter = new IntersectionObserver((eintraege) => {
+        for (const eintrag of eintraege) eintrag.target.classList.toggle('laeuft', eintrag.isIntersecting);
+      });
+      document.querySelectorAll('[data-bewegung]').forEach((teil) => beobachter.observe(teil));
+    }
+    const dunkel = matchMedia('(prefers-color-scheme: dark)');
+    const beschreiben = () => {
+      for (const bild of document.querySelectorAll('img[data-alt-dunkel]')) {
+        bild.alt = dunkel.matches ? bild.dataset.altDunkel : bild.dataset.altHell;
+      }
+    };
+    beschreiben();
+    dunkel.addEventListener('change', beschreiben);
+  })();
+</script>
+</body>
+</html>
