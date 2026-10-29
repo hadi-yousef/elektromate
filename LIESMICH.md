@@ -78,3 +78,8 @@ Prüffälle: Handy 390 px und Desktop 1280 px, jeweils hell und dunkel; 320 px; 
 Nicht geprüft: Safari auf einem echten iPhone und im iOS-Simulator (die Simulatoren waren für die App-Tests belegt), Android-Geräte, Firefox.
 
 Prüfbilder: `docs/pruefbilder/1-…` bis `8-…` (Handy mit WebKit, Desktop, Zoom 200 %, Fokus, Android und Impressum mit Chrome).
+
+Prüfwerkzeuge in `docs/werkzeuge/` (ohne Downloads, nutzen das installierte Chrome und WebKit am Mac):
+- `pruefen.mjs`: alle Prüffälle in Chrome ohne Oberfläche, mit Bildern und `befund.json`. Aufruf: `node docs/werkzeuge/pruefen.mjs http://127.0.0.1:8765/ /tmp/pruefung`
+- `webkit.swift`: eine Seite mit WebKit als Bild. Aufruf: `swift docs/werkzeuge/webkit.swift <url> <breite> <hell|dunkel> <bild.png>`
+- `links.py`: Links, Sprungziele, IDs und Wortlaut von Datenschutz und Support. Aufruf: `python3 -I docs/werkzeuge/links.py .`
