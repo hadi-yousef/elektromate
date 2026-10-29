@@ -1,6 +1,8 @@
 # elektromate-pages – Wegweiser
 
-**Zweck:** Website zur App ElektroMate Pro: Startseite, Datenschutz und Support (`index.html`, `datenschutz.html`, `support.html`).
+**Zweck:** Website zur App ElektroMate Pro: Startseite, Android-Download, Datenschutz, Support und Impressum (`index.html`, `android.html`, `datenschutz.html`, `support.html`, `impressum.html`).
+
+**Neue Website (W1, Wunsch Nr. 236):** Zweig `website-neu`, Arbeitskopie `.worktrees/website-neu`. Nicht veröffentlicht. Stand, offene Punkte und Anleitung in `LIESMICH.md`.
 
 **Ort:** `~/Projekte/elektromate-pages`, die einzige Arbeitskopie. Seit 21.10.2026.
 

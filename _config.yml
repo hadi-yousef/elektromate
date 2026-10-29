@@ -1,0 +1,7 @@
+# GitHub Pages baut diese Seite mit Jekyll.
+# Interne Dateien gehören nicht auf die öffentliche Website.
+exclude:
+  - docs
+  - LIESMICH.md
+  - AGENTS.md
+  - INDEX.md
