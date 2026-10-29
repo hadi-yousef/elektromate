@@ -1,0 +1,122 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Website – Startseite, zwei Richtungen (Entwurf Claude, 29.10.2026)</title><style>
+body{margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,340px);gap:24px;justify-content:center;padding:4px 0}
+.lab{width:340px;margin-bottom:10px}
+.lab b{display:block;font:600 15px/1.3 var(--font-sans);color:var(--foreground)}
+.lab span{font:13px/1.35 var(--font-sans);color:var(--muted-foreground)}
+.page{width:340px;border-radius:22px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 18px 40px rgba(0,0,0,.28)}
+.bar{display:flex;align-items:center;gap:8px;padding:12px 16px}
+.logo{width:26px;height:26px;border-radius:8px;background:#2359E8;display:grid;place-items:center}
+.logo svg{width:15px;height:15px;fill:#fff}
+.bar .nm{font-size:14.5px;font-weight:650}
+.bar .nm i{font-style:normal;font-weight:500;opacity:.6}
+.bar .sp{flex:1}
+.pill{font-size:12px;font-weight:650;padding:6px 11px;border-radius:999px}
+.hero{padding:10px 18px 0}
+.hero h1{margin:0;font-size:29px;line-height:1.08;letter-spacing:-.02em;font-weight:800}
+.hero p{margin:10px 0 0;font-size:14px;line-height:1.45}
+.cta{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;padding:11px 14px;border-radius:12px}
+.btn small{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:6px}
+.phones{position:relative;height:300px;margin-top:6px}
+.ph{position:absolute;width:132px;height:287px;border-radius:24px;overflow:hidden;box-shadow:0 0 0 4px #15181f,0 0 0 5px #2b303a,0 16px 30px rgba(0,0,0,.3)}
+.ph img{width:100%;display:block}
+.sec{padding:18px 18px 4px}
+.sec .k{font-size:10.5px;font-weight:750;letter-spacing:.14em}
+.sec h2{margin:4px 0 6px;font-size:20px;line-height:1.15;letter-spacing:-.01em;font-weight:780}
+.sec p{margin:0;font-size:13.5px;line-height:1.45}
+.cards{position:relative;height:150px;margin:12px -18px 0;overflow:hidden}
+.cards .cr{position:absolute;left:0;width:340px;overflow:hidden}
+.cards .cr img{position:absolute;left:0;width:340px}
+.row2{display:grid;grid-template-columns:1fr 132px;gap:14px;align-items:center;margin-top:10px}
+.mini{position:relative;width:132px;height:287px;border-radius:24px;overflow:hidden;box-shadow:0 0 0 4px #15181f,0 0 0 5px #2b303a,0 14px 26px rgba(0,0,0,.28)}
+.mini img{width:100%;display:block}
+.priv{display:flex;gap:10px;align-items:flex-start;margin:16px 18px 0;padding:12px 14px;border-radius:16px}
+.priv svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+.priv b{display:block;font-size:13.5px}.priv span{font-size:12.5px;line-height:1.4}
+.foot{display:flex;gap:14px;justify-content:center;padding:18px 0 20px;font-size:12px;font-weight:600}
+/* Richtung A: hell und ruhig */
+.A{background:#F5F6FA;color:#172337}
+.A .bar .pill{background:#EDF2FF;color:#2359E8}
+.A .hero p,.A .sec p{color:#58667C}
+.A .sec .k{color:#58667C}
+.A .lime{background:#C9ED9D;color:#173424}.A .lime small{background:rgba(23,52,36,.12)}
+.A .ghost{background:#fff;color:#172337;box-shadow:inset 0 0 0 1px #E0E5EF}.A .ghost small{background:#EDF2FF;color:#2359E8}
+.A .glow{position:absolute;left:50%;top:40px;width:250px;height:250px;margin-left:-125px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.35),rgba(56,189,248,0) 70%)}
+.A .priv{background:#fff;box-shadow:0 0 0 1px #E0E5EF;color:#172337}.A .priv span{color:#58667C}
+.A .foot{color:#58667C}
+/* Richtung B: dunkel und lebendig */
+.B{background:#0E1A33;color:#EAF0FA;background-image:radial-gradient(circle at 80% 8%,rgba(89,208,255,.18),transparent 40%),radial-gradient(circle at 10% 55%,rgba(201,237,157,.08),transparent 35%)}
+.B .bar .pill{background:rgba(201,237,157,.14);color:#C9ED9D}
+.B .hero p,.B .sec p{color:#A9B9D3}
+.B .sec .k{color:#C9ED9D}
+.B .hero h1 em{font-style:normal;color:#C9ED9D}
+.B .lime{background:#C9ED9D;color:#173424}.B .lime small{background:rgba(23,52,36,.14)}
+.B .ghost{background:rgba(255,255,255,.07);color:#EAF0FA;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.B .ghost small{background:rgba(89,208,255,.18);color:#59D0FF}
+.B .glow{position:absolute;left:50%;top:30px;width:270px;height:270px;margin-left:-135px;border-radius:50%;background:radial-gradient(circle,rgba(89,208,255,.32),rgba(89,208,255,0) 70%)}
+.B .wire{position:absolute;left:0;right:0;top:150px;height:2px;background:repeating-linear-gradient(90deg,rgba(89,208,255,.0) 0 6px,rgba(89,208,255,.55) 6px 9px)}
+.B .priv{background:#13254A;color:#EAF0FA}.B .priv span{color:#A9B9D3}
+.B .foot{color:#A9B9D3}
+.B .sec{position:relative}
+.B .sec.card{margin:14px 12px 0;padding:16px 16px 14px;border-radius:20px;background:#13254A}
+.info{box-sizing:border-box;background:var(--card);color:var(--card-foreground);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;font:13.5px/1.45 var(--font-sans);margin-top:16px}
+.info .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info h4{margin:0 0 6px;font-size:14px}
+.info ul{margin:0;padding-left:18px}.info li{margin-bottom:4px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><symbol id="bolt" viewBox="0 0 24 24"><path d="M13.5 2 5 13.5h6.2L10 22l9-12h-6.4z"/></symbol><symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol></defs></svg>
+<div class="grid">
+
+<div><div class="lab"><b>A · Hell und ruhig</b><span>Wie die App bei Tag: helle Fläche, große Überschrift, echte Bildschirme. Die Farbe kommt aus den Kapitelkarten.</span></div>
+<div class="page A">
+ <div class="bar"><div class="logo"><svg><use href="#bolt"/></svg></div><div class="nm">ElektroMate <i>Pro</i></div><div class="sp"></div><div class="pill">Laden</div></div>
+ <div class="hero"><h1>Elektrotechnik verstehen. Schritt für Schritt.</h1>
+  <p>Die Lern-App für Elektro-Lehrlinge in Österreich und Deutschland: kurze Lektionen mit bewegten Bildern, freiwillige Quizfragen und eine Werkstatt für eigene Schaltungen.</p>
+  <div class="cta"><span class="btn lime">Für Android laden <small>bald</small></span><span class="btn ghost">iPhone <small>im Test</small></span></div></div>
+ <div class="phones"><div class="glow"></div>
+  <div class="ph" style="left:40px;top:6px;transform:rotate(-5deg)"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app25-galerie-light.jpg"></div>
+  <div class="ph" style="left:168px;top:0"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app-01-heute-light.jpg"></div></div>
+ <div class="sec"><div class="k">LERNPFAD</div><h2>6 Kapitel, 37 Themen</h2><p>Vom Atom bis zum Drehstrom. Jedes Thema ist in wenigen Minuten gelesen.</p></div>
+ <div class="cards" style="height:224px"><div class="cr" style="top:0;height:224px"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app25-galerie-light.jpg" style="top:-283px"></div></div>
+ <div class="sec"><div class="k">LEKTIONEN</div><h2>Bilder, die sich bewegen</h2>
+  <div class="row2"><p>Jedes Thema ist eine Lektion zum Durchscrollen. Die Lernbilder bewegen sich mit, das Quiz am Ende ist freiwillig.</p><div class="mini"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app-12-lektion-illustration-dark.jpg"></div></div></div>
+ <div class="sec"><div class="k">WERKSTATT</div><h2>Schaltung bauen, Strom sehen</h2>
+  <div class="row2"><p>Baue Schaltungen mit echten Schaltzeichen. Die App rechnet mit und zeigt, wo Strom fließt.</p><div class="mini"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app-editor.jpg"></div></div></div>
+ <div class="priv"><svg><use href="#lock"/></svg><div><b>Dein Lernstand bleibt bei dir</b><span>Kein Konto, keine Werbung. Alles bleibt auf deinem Gerät.</span></div></div>
+ <div class="foot"><span>Datenschutz</span><span>Support</span><span>Impressum</span></div>
+</div></div>
+
+<div><div class="lab"><b>B · Dunkel und lebendig</b><span>Wie die Leseansicht der App: Nachtblau, Limette als Akzent, ein leuchtender Stromfaden. Die Bereiche stehen auf dunklen Karten.</span></div>
+<div class="page B">
+ <div class="bar"><div class="logo"><svg><use href="#bolt"/></svg></div><div class="nm">ElektroMate <i>Pro</i></div><div class="sp"></div><div class="pill">Laden</div></div>
+ <div class="hero"><h1>Elektrotechnik verstehen. <em>Schritt für Schritt.</em></h1>
+  <p>Die Lern-App für Elektro-Lehrlinge in Österreich und Deutschland: kurze Lektionen mit bewegten Bildern, freiwillige Quizfragen und eine Werkstatt für eigene Schaltungen.</p>
+  <div class="cta"><span class="btn lime">Für Android laden <small>bald</small></span><span class="btn ghost">iPhone <small>im Test</small></span></div></div>
+ <div class="phones"><div class="glow"></div><div class="wire"></div>
+  <div class="ph" style="left:40px;top:6px;transform:rotate(-5deg)"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app-12-lektion-illustration-dark.jpg"></div>
+  <div class="ph" style="left:168px;top:0"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app25-kapitel1-dark.jpg"></div></div>
+ <div class="sec card"><div class="k">LERNPFAD</div><h2>6 Kapitel, 37 Themen</h2>
+  <div class="row2"><p>Vom Atom bis zum Drehstrom. Jedes Thema ist in wenigen Minuten gelesen.</p><div class="mini"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app25-kapitel1-dark.jpg"></div></div></div>
+ <div class="sec card"><div class="k">LEKTIONEN</div><h2>Bilder, die sich bewegen</h2>
+  <div class="row2"><p>Jedes Thema ist eine Lektion zum Durchscrollen. Die Lernbilder bewegen sich mit, das Quiz am Ende ist freiwillig.</p><div class="mini"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app-12-lektion-illustration-dark.jpg"></div></div></div>
+ <div class="sec card"><div class="k">WERKSTATT</div><h2>Schaltung bauen, Strom sehen</h2>
+  <div class="row2"><p>Baue Schaltungen mit echten Schaltzeichen. Die App rechnet mit und zeigt, wo Strom fließt.</p><div class="mini"><img src="/Users/y.hadi/Projekte/elektromate-pages/.worktrees/website-neu/docs/design/bilder/app-editor.jpg"></div></div></div>
+ <div class="priv"><svg><use href="#lock"/></svg><div><b>Dein Lernstand bleibt bei dir</b><span>Kein Konto, keine Werbung. Alles bleibt auf deinem Gerät.</span></div></div>
+ <div class="foot"><span>Datenschutz</span><span>Support</span><span>Impressum</span></div>
+</div></div>
+
+</div>
+<div class="info"><div class="cols">
+<div><h4>In beiden Richtungen gleich</h4><ul>
+<li>Echte Bildschirme aus Build 24 und 25, keine nachgezeichneten</li>
+<li>Logo, Limette, Schaltzeichen und Kapitelfarben wie in der App</li>
+<li>Ohne Konto, Werbung oder Tracking. Keine fremden Schriften.</li>
+<li>Texte sind Entwürfe von Claude, Kaiser gibt sie frei.</li>
+</ul></div>
+<div><h4>Noch offen</h4><ul>
+<li>Der Android-Knopf zeigt „bald“, bis die APK fertig ist. Dann kommt die Download-Seite mit Version, Größe und Prüfsumme.</li>
+<li>Impressum: Name, Anschrift und Kontakt liefert Kaiser.</li>
+<li>Veröffentlicht wird erst nach Kaisers OK. Bis dahin bleibt die heutige Seite online.</li>
+</ul></div>
+</div></div>
+</body></html>
